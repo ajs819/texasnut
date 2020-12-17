@@ -1,30 +1,34 @@
 .gform_wrapper {
-  ul.gform_fields {
-    @extend .list-unstyled, .row, .gy-3, .mb-4;
-
-    li.gfield {
-      input, select, textarea {
-        @extend .form-control;
-      }
-
-      textarea {
-        max-height: 160px;
-      }
-
-      &.gfield_error {
-        .gfield_label {
-          @extend .text-danger;
-        }
-
+  .gform_body {
+    @extend .mt-4;
+    
+    ul.gform_fields {
+      @extend .list-unstyled, .row, .gy-3, .mb-4;
+  
+      li.gfield {
         input, select, textarea {
-          @extend .alert-danger;
+          @extend .form-control;
+        }
+  
+        textarea {
+          max-height: 160px;
+        }
+  
+        &.gfield_error {
+          .gfield_label {
+            @extend .text-danger;
+          }
+  
+          input, select, textarea {
+            @extend .alert-danger;
+          }
         }
       }
     }
   }
-
+  
   .gform_button {
-    @extend .btn, .btn-secondary;
+    @extend .btn, .btn-primary;
   }
 
   .gform_validation_container,

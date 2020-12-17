@@ -187,3 +187,8 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+	/**
+	 * Custom functions
+	 */
+  include 'inc/acf-gf.php';

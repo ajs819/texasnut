@@ -17,7 +17,7 @@ body {
 .section {
   position: relative;
 
-  .container {
+  [class^="container"] {
     position: relative;
   }
 }

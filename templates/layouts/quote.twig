@@ -1,5 +1,5 @@
 <section class="section layout-{{ layout.acf_fc_layout }} d-flex align-items-center">
-  <div class="bg-cover overlay">
+  <div class="bg-cover {{ layout.image_overlay ? 'overlay' }}">
     <picture>
       <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
       <img loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
@@ -7,12 +7,12 @@
   </div>
 
   <div class="container py-6">
-    <figure class="text-center">
-      <blockquote class="blockquote text-white">
-        {{ layout.quote }}
+    <figure class="text-center text-shadow">
+      <blockquote class="blockquote fs-1 text-white">
+        &ldquo;{{ layout.quote }}&rdquo;
       </blockquote>
 
-      <figcaption class="blockquote-footer text-white">
+      <figcaption class="blockquote-footer fs-3 text-white">
         <cite title="{{ layout.cite }}">{{ layout.cite }}</cite>
       </figcaption>
     </figure>
