@@ -1,18 +1,16 @@
 <section class="section layout-{{ layout.acf_fc_layout }} d-flex align-items-center">
-  <div class="hero-img">
-    <div class="rellax">
-      <picture>
-        <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
-        <img class="object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
-      </picture>
-    </div>
+  <div class="bg-cover overlay">
+    <picture>
+      <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
+      <img class="rellax object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+    </picture>
   </div>
 
   <div class="texas-stamp">
     <img loading="lazy" class="img-fluid" src="{{ theme.path }}/dist/assets/texas-stamp.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
   </div>
 
-  <div class="container py-5 text-center text-white">
+  <div class="container py-5 py-lg-6 text-center text-white">
     {% if layout.title %}
       <h1 class="display-4">{{ layout.title }}</h1>
     {% endif %}

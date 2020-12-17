@@ -1,0 +1,20 @@
+<section class="section layout-{{ layout.acf_fc_layout }} d-flex align-items-center">
+  <div class="bg-cover overlay">
+    <picture>
+      <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
+      <img loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+    </picture>
+  </div>
+
+  <div class="container py-6">
+    <figure class="text-center">
+      <blockquote class="blockquote text-white">
+        {{ layout.quote }}
+      </blockquote>
+
+      <figcaption class="blockquote-footer text-white">
+        <cite title="{{ layout.cite }}">{{ layout.cite }}</cite>
+      </figcaption>
+    </figure>
+  </div>
+</section>

@@ -6,8 +6,6 @@
     {% for layout in post.meta('layouts') %}
       {% include 'layouts/' ~ layout.acf_fc_layout ~ '.twig' %}
     {% endfor %}
-
-    <div class="bg-dark" style="height: 1000px;"></div>
   </article>
 </div><!-- /content-wrapper -->
 {% endblock %}

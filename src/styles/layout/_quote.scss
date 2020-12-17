@@ -1,0 +1,6 @@
+.layout-quote {
+  @include media-breakpoint-up(lg) {
+    height: 25vw;
+    max-height: 500px;
+  }
+}
