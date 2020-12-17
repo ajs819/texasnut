@@ -1,7 +1,5 @@
 #header {
-  @include media-breakpoint-up(xl) {
-    height: 80px;
-  }
+  border-bottom: 4px solid $primary;
 
   body.admin-bar & {
     @include media-breakpoint-up(sm) {
@@ -14,34 +12,16 @@
   }
 
   .navbar-brand {
-    position: absolute;
-    top: 4px;
-
-    @include media-breakpoint-up(xl) {
-      top: 6px;
-    }
-
     img {
-      max-width: 70vw;
+      max-width: 50vw;
     }
   }
 
-  .navbar-toggler-container {
-    height: 15vw;
-    max-height: 80px;
+  .hamburger {
+    margin-right: -$hamburger-padding-x;
 
-    .hamburger {
-      margin-right: -$hamburger-padding-x;
-
-      &:not(.collapsed) {
-        @extend .is-active;
-      }
-    }
-  }
-
-  .navbar-collapse {
-    @include media-breakpoint-down(md) {
-      z-index: 2;
+    &:not(.collapsed) {
+      @extend .is-active;
     }
   }
 }
