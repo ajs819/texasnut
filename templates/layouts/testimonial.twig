@@ -9,15 +9,15 @@
   </div>
 
   <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-2">
+    <div class="row justify-content-center align-items-center gy-3 gy-md-0">
+      <div class="col-12 col-md-3 col-lg-2">
         <picture>
           <source srcset="{{ testimonial.thumbnail.src|resize(350, 350)|towebp }}" type="image/webp">
-          <img class="img-fluid rounded-circle" loading="lazy" src="{{ testimonial.thumbnail.src|resize(350, 350) }}" alt="{{ testimonial.thumbnail.alt }}">
+          <img class="img-fluid rounded-circle d-block mx-auto w-50 w-md-auto" loading="lazy" src="{{ testimonial.thumbnail.src|resize(350, 350) }}" alt="{{ testimonial.thumbnail.alt }}">
         </picture>
       </div>
 
-      <div class="col-12 col-lg-10">
+      <div class="col-12 col-md-auto">
         <figure>
           <blockquote class="blockquote text-white">
             {{ testimonial.content }}
