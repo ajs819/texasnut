@@ -1,0 +1,31 @@
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+}
+
+.section {
+  position: relative;
+
+  &:first-child {
+    padding-top: $header-height-xs;
+    
+    @include media-breakpoint-up(lg) {
+      padding-top: $header-height-lg;
+    }
+  }
+
+  .anchor {
+    position: absolute;
+    bottom: 100%;
+    height: $header-height-xs;
+
+    @include media-breakpoint-up(lg) {
+      height: $header-height-lg;
+    }
+  }
+}

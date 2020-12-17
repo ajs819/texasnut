@@ -1,0 +1,35 @@
+.gform_wrapper {
+  ul.gform_fields {
+    @extend .list-unstyled, .row, .gy-3, .mb-4;
+
+    li.gfield {
+      input, select, textarea {
+        @extend .form-control;
+      }
+
+      textarea {
+        max-height: 160px;
+      }
+
+      &.gfield_error {
+        .gfield_label {
+          @extend .text-danger;
+        }
+
+        input, select, textarea {
+          @extend .alert-danger;
+        }
+      }
+    }
+  }
+
+  .gform_button {
+    @extend .btn, .btn-secondary;
+  }
+
+  .gform_validation_container,
+  .validation_error,
+  .validation_message {
+    @extend .d-none;
+  }
+}

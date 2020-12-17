@@ -1,0 +1,10 @@
+.DS_Store
+vendor
+wp-content
+composer.lock
+node_modules
+style.css
+!src/vendor
+acf-json
+dist
+package-lock.json

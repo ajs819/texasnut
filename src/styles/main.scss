@@ -1,0 +1,38 @@
+/*!
+ * Theme Name: Vault Foods
+ * Author: Alon Shur
+ * Author URI: https://alonshur.com
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import 'abstracts/variables-bs';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import 'abstracts/variables';
+
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+/* purgecss start ignore */
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+/* purgecss end ignore */
+
+/* purgecss start ignore */
+// @import 'abstracts/mixins';
+@import 'abstracts/utilities';
+@import 'base/gravity-forms';
+// @import 'base/typography';
+@import 'base/wordpress';
+@import 'components/buttons';
+// @import 'layout/alert';
+@import 'layout/header';
+// @import 'layout/hero';
+// @import 'layout/flexible-content';
+// @import 'layout/footer';
+@import 'layout/core';
+// @import 'layout/submenu';
+// @import 'pages/home';
+// @import 'pages/quote';
+/* purgecss end ignore */

@@ -1,0 +1,9 @@
+.object-fit-cover {
+  object-fit: cover;
+}
+
+@for $i from 1 through 2 {
+  .z-index-#{$i} {
+    z-index: $i;
+  }
+}
