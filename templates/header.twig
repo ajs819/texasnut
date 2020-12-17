@@ -1,6 +1,6 @@
 <nav id="header" class="navbar sticky-top navbar-expand-xl navbar-light bg-white shadow">
   <div class="container-fluid">
-    <div class="position-relative w-100 d-flex justify-content-center justify-content-xl-start">
+    <div class="position-relative w-100 w-xl-auto d-flex justify-content-center justify-content-xl-start">
       <a class="navbar-brand" href="{{ site.link }}#">
         <img src="{{ theme.path }}/dist/assets/logo.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
       </a>
@@ -17,7 +17,7 @@
         <ul class="navbar-nav text-center">
           {% for item in main_menu.items %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ item.url }}" target="{{ item.target }}">
+              <a class="nav-link text-uppercase" href="{{ item.url }}" target="{{ item.target }}">
                 {{ item.title }}
               </a>
             </li>
