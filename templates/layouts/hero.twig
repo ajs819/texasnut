@@ -1,9 +1,11 @@
 <section class="section layout-{{ layout.acf_fc_layout }} d-flex align-items-center">
   <div class="bg-cover overlay">
-    <picture>
-      <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
-      <img class="rellax object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
-    </picture>
+    <div class="rellax">
+      <picture>
+        <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
+        <img class="object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+      </picture>
+    </div>
   </div>
 
   <div class="texas-stamp">

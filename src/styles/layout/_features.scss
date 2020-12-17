@@ -1,0 +1,37 @@
+.layout-features {
+  @include media-breakpoint-up(lg) {
+    height: 75vh;
+    max-height: 650px;
+  }
+
+  .feature {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+    }
+
+    &:hover {
+      .bg-cover {
+        transform: scale(1.05);
+      }
+
+      .overlay::after {
+        background-color: rgba($black, .2);
+      }
+    }
+
+    &-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
