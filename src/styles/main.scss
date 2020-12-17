@@ -4,7 +4,8 @@
  * Author URI: https://alonshur.com
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import 'abstracts/variables-bs';
@@ -20,19 +21,11 @@
 /* purgecss end ignore */
 
 /* purgecss start ignore */
-// @import 'abstracts/mixins';
 @import 'abstracts/utilities';
 @import 'base/gravity-forms';
-// @import 'base/typography';
 @import 'base/wordpress';
 @import 'components/buttons';
-// @import 'layout/alert';
 @import 'layout/header';
-// @import 'layout/hero';
-// @import 'layout/flexible-content';
 // @import 'layout/footer';
 @import 'layout/core';
-// @import 'layout/submenu';
-// @import 'pages/home';
-// @import 'pages/quote';
-/* purgecss end ignore */
+@import 'layout/hero';

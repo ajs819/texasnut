@@ -56,7 +56,8 @@ function styles() {
 // Concatenate, minify, and lint vendor scripts
 function vendor() {
     'use strict';
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+                     'node_modules/rellax/rellax.min.js'])
         .pipe(plumber())
         .pipe(eslint())
         .pipe(eslint.format())
