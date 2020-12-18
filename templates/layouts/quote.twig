@@ -2,7 +2,7 @@
   <div class="bg-cover {{ layout.image_overlay ? 'overlay' }}">
     <picture>
       <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
-      <img loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+      <img loading="lazy" class="bg-cover-img" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
     </picture>
   </div>
 

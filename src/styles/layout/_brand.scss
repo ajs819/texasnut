@@ -1,0 +1,21 @@
+.layout-brand {
+  @include media-breakpoint-up(lg) {
+    height: 50vw;
+    max-height: 700px;
+  }
+
+  .texas-stamp {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 24vw;
+    max-width: 132px;
+    opacity: .2;
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      bottom: 2rem;
+      right: 2rem;
+    }
+  }
+}

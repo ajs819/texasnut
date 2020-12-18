@@ -1,18 +1,20 @@
 <section class="section layout-{{ layout.acf_fc_layout }} d-flex align-items-center">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-lg-6 order-lg-2 g-0">
-        <picture>
-          <source srcset="{{ theme.path }}/dist/assets/plank-logo.webp" type="image/webp">
-          <img loading="lazy" class="object-fit-cover w-100 h-100" src="{{ theme.path }}/dist/assets/plank-logo.webp" alt="">
-        </picture>
+      <div class="col-12 col-lg-6 order-lg-2 g-0 position-relative">
+        <div class="bg-lg-cover">
+          <picture>
+            <source srcset="{{ theme.path }}/dist/assets/plank-logo.webp" type="image/webp">
+            <img loading="lazy" class="bg-cover-img img-fluid" src="{{ theme.path }}/dist/assets/plank-logo.webp" alt="">
+          </picture>
+        </div>
       </div>
 
       <div class="col-12 col-lg-6 order-lg-1 py-5 py-lg-6 position-relative">
         <div class="bg-cover">
           <picture>
             <source srcset="{{ theme.path }}/dist/assets/wood-texture-light.webp" type="image/webp">
-            <img loading="lazy" src="{{ theme.path }}/dist/assets/wood-texture-light.jpg" alt="">
+            <img loading="lazy" class="bg-cover-img" src="{{ theme.path }}/dist/assets/wood-texture-light.jpg" alt="">
           </picture>
         </div>
 

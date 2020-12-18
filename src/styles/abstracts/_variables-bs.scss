@@ -999,8 +999,8 @@ $pagination-transition:              color .15s ease-in-out, background-color .1
 
 // Cards
 
-$card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
+$card-spacer-y:                     $spacer * 2;
+$card-spacer-x:                     $spacer * 2;
 $card-title-spacer-y:               $spacer / 2 !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;

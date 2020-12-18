@@ -3,7 +3,7 @@
     <div class="rellax">
       <picture>
         <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
-        <img class="object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+        <img class="bg-cover-img object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
       </picture>
     </div>
   </div>

@@ -1,11 +1,13 @@
+html {
+  @include media-breakpoint-up(xl) {
+    font-size: 1.1rem;
+  }
+}
+
 body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @include media-breakpoint-up(lg) {
-    // font-size: 1.2rem;
-  }
 }
 
 #container {

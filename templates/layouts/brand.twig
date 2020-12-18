@@ -1,0 +1,47 @@
+<section class="section layout-{{ layout.acf_fc_layout }} border-bottom border-white">
+  {% if layout.image %}
+    <div class="bg-lg-cover overlay">
+      <picture>
+        <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
+        <img loading="lazy" class="bg-cover-img img-fluid" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+      </picture>
+
+      <div class="texas-stamp">
+        <img loading="lazy" class="img-fluid" src="{{ theme.path }}/dist/assets/texas-stamp.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-xl-4">
+        <div class="card shadow" style="background-color: {{ layout.color }}">
+          <div class="card-body text-white">
+            {% if layout.logo %}
+              <picture>
+                <source srcset="{{ Image(layout.logo).src|resize(600)|towebp }}" type="image/webp">
+                <img loading="lazy" class="img-fluid" src="{{ Image(layout.logo).src|resize(600) }}" alt="{{ layout.logo.alt }}">
+              </picture>
+            {% endif %}
+
+            {% if layout.title %}
+              <h2 class="h5 mt-4">{{ layout.title }}</h2>
+            {% endif %}
+    
+            {% if layout.text %}
+              <p>{{ layout.text }}</p>
+            {% endif %}
+
+            {% if layout.link %}
+              <div class="mt-4 text-center">
+                <a class="btn btn-outline-light" href="{{ layout.link.url }}" target="{{ layout.link.target }}">
+                  {{ layout.link.title }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
