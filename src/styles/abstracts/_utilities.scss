@@ -10,9 +10,12 @@
       width: auto !important;
     }
 
+    .h#{$infix}-100 {
+      height: 100% !important;
+    }
+
     .bg#{$infix}-cover {
       overflow: hidden;
-      transition: transform .5s ease-in-out;
     
       &, .rellax, .bg-cover-img {
         position: absolute;

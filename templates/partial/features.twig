@@ -4,50 +4,17 @@
   <section class="section layout-features">
     <div class="row g-0 h-100">
       <div class="col-12 col-lg-6">
-        <a class="feature" href="{{ features[0].link }}">
-          <div class="bg-cover overlay">
-            <picture>
-              <source srcset="{{ Image(features[0].image).src|resize(1280)|towebp }}" type="image/webp">
-              <img class="bg-cover-img object-position-{{ features[0].image_y_position }}" loading="lazy" src="{{ Image(features[0].image).src|resize(1280) }}" alt="{{ features[0].image.alt }}">
-            </picture>
-          </div>
-
-          <div class="container-fluid feature-content">
-            <span class="h2 text-white text-shadow">{{ features[0].title }}</span>
-          </div>
-        </a>
+        {% include 'partial/feature.twig' with { feature: features[0] } %}
       </div>
 
       <div class="col-12 col-lg-6">
         <div class="row g-0 h-100 align-items-lg-stretch">
           <div class="col-12">
-            <a class="feature" href="{{ features[1].link }}">
-              <div class="bg-cover overlay">
-                <picture>
-                  <source srcset="{{ Image(features[1].image).src|resize(1280)|towebp }}" type="image/webp">
-                  <img class="object-position-{{ features[1].image_y_position }}" loading="lazy" src="{{ Image(features[1].image).src|resize(1280) }}" alt="{{ features[1].image.alt }}">
-                </picture>
-              </div>
-    
-              <div class="container-fluid feature-content">
-                <span class="h2 text-white text-shadow">{{ features[1].title }}</span>
-              </div>
-            </a>
+            {% include 'partial/feature.twig' with { feature: features[1] } %}
           </div>
 
           <div class="col-12">
-            <a class="feature" href="{{ features[2].link }}">
-              <div class="bg-cover overlay">
-                <picture>
-                  <source srcset="{{ Image(features[2].image).src|resize(1280)|towebp }}" type="image/webp">
-                  <img class="object-position-{{ features[2].image_y_position }}" loading="lazy" src="{{ Image(features[2].image).src|resize(1280) }}" alt="{{ features[2].image.alt }}">
-                </picture>
-              </div>
-    
-              <div class="container-fluid feature-content">
-                <span class="h2 text-white text-shadow">{{ features[2].title }}</span>
-              </div>
-            </a>
+            {% include 'partial/feature.twig' with { feature: features[2] } %}
           </div>
         </div>
       </div>
