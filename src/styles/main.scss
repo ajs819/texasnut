@@ -18,9 +18,7 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-/* purgecss end ignore */
 
-/* purgecss start ignore */
 @import 'abstracts/utilities';
 @import 'base/gravity-forms';
 @import 'base/wordpress';
@@ -32,3 +30,4 @@
 @import 'layout/hero';
 @import 'layout/features';
 @import 'layout/quote';
+/* purgecss end ignore */
