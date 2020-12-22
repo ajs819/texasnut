@@ -19,8 +19,8 @@
         {% for column in layout.columns %}
           <div class="col-12 col-lg-4">
             {% if column.image %}
-              <div class="px-6 mb-4">
-                <div class="ratio ratio-1x1">
+              <div class="px-5 mb-4">
+                <div class="ratio ratio-4x3">
                   <picture>
                     <source srcset="{{ Image(column.image).src|towebp }}" type="image/webp">
                     <img class="w-100 h-100" loading="lazy" src="{{ Image(column.image).src }}" alt="{{ column.image.alt }}">
