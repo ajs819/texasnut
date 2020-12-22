@@ -1,5 +1,12 @@
-<footer id="footer" class="bg-primary text-white">
-  <div class="container py-4 py-lg-5">
+<footer id="footer" class="position-relative bg-primary text-white">
+  <div class="bg-cover">
+    <picture>
+      <source srcset="{{ theme.path }}/dist/assets/wood-texture.webp" type="image/webp">
+      <img loading="lazy" class="bg-cover-img" src="{{ theme.path }}/dist/assets/wood-texture.jpg" alt="">
+    </picture>
+  </div>
+
+  <div class="container position-relative py-4 py-lg-5">
     <div class="row justify-content-between">
       <div class="col-12 col-lg-auto">
         <div class="row">
@@ -43,17 +50,8 @@
         </div>
       </div>
 
-      <div class="col-12 col-lg-auto mt-4 mt-lg-0">
-        <img class="d-block mx-auto img-fluid" src="{{ theme.path }}/dist/assets/logo.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
-
-        <div class="d-flex justify-content-center mt-4">
-          <p class="text-center text-lg-start">
-            Texas Star Nut and Food Co.<br>
-            206 Market Ave.<br>
-            Boerne, TX 78006<br>
-            1-866-455-8300
-          </p>
-        </div>
+      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+        <img class="d-block mx-auto img-fluid" src="{{ theme.path }}/dist/assets/logo.svg" alt="Texas Star Nut &amp; Food Co.&trade;" style="filter: brightness(100);">
       </div>
     </div>
 
