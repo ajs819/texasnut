@@ -17,6 +17,12 @@
           <h2>{{ layout.title }}</h2>
         {% endif %}
 
+        {% if layout.subtitle %}
+          <p class="lead mb-0">
+            {{ layout.subtitle }}
+          </p>
+        {% endif %}
+
         {{ layout.text }}
 
         {% if layout.link %}
