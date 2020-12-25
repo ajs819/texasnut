@@ -2,8 +2,14 @@
   <div class="bg-cover overlay">
     <div class="rellax">
       <picture>
-        <source srcset="{{ Image(layout.image).src|resize(2560)|towebp }}" type="image/webp">
-        <img class="bg-cover-img object-position-{{ layout.image_y_position }}" loading="lazy" src="{{ Image(layout.image).src|resize(2560) }}" alt="{{ layout.image.alt }}">
+        <source type="image/webp"
+          sizes="(max-width: {{ image_sizes|last }}px) 100vw, {{ image_sizes|last }}px"
+          srcset="{% for size in image_sizes %}{{ Image(layout.image).src|resize(size)|towebp }} {{ size }}w{{ loop.last ? '' : ',' }}{% endfor %}">
+
+          <img class="bg-cover-img object-position-{{ layout.image_y_position }}"
+            sizes="(max-width: {{ image_sizes|last }}px) 100vw, {{ image_sizes|last }}px"
+            srcset="{% for size in image_sizes %}{{ Image(layout.image).src|resize(size) }} {{ size }}w{{ loop.last ? '' : ',' }}{% endfor %}"
+            src="{{ Image(layout.image).src|resize(image_sizes|last) }}" alt="{{ post.thumbnail.alt }}">
       </picture>
     </div>
   </div>

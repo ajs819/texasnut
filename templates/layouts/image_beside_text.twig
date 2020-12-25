@@ -26,7 +26,9 @@
         {{ layout.text }}
 
         {% if layout.link %}
-        <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }}">{{ layout.link.title }}</a>
+          <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }}">
+            {{ layout.link.title }}
+          </a>
         {% endif %}
       </div>
     </div>

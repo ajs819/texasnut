@@ -66,3 +66,20 @@
 .text-shadow {
   text-shadow: 2px 4px 3px rgba($black, .3);
 }
+
+// .ratio {
+//   overflow: hidden;
+
+//   img {
+//     object-fit: cover;
+//     width: 100%;
+//     height: 100%;
+//     transition: transform .25s ease-in-out;
+//   }
+
+//   a:hover & {
+//     img {
+//       transform: scale(1.05);
+//     }
+//   }
+// }

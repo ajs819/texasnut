@@ -83,11 +83,9 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo']   = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['main_menu']  = new Timber\Menu( 'main_Menu');
-		$context['site']  = $this;
+    $context['site'] = $this;
+    $context['main_menu'] = new Timber\Menu( 'main_Menu');
+    $context['image_sizes'] = [ 320, 640, 960, 1280, 1920, 2560 ];
 		return $context;
 	}
 
