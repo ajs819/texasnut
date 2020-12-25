@@ -1,7 +1,7 @@
 {% set articles = fn('get_posts', { 'post_type': 'press_article', 'numberposts': 3 } ) %}
 
 <section class="section layout-{{ layout.acf_fc_layout }}">
-  <div class="container py-5">
+  <div class="container py-5 py-lg-6">
     {% if layout.title %}
       <h2 class="text-center">{{ layout.title }}</h2>
     {% endif %}
@@ -11,7 +11,7 @@
         {% set article = Post(article) %}
 
         <div class="col-12 col-lg-4">
-          <a href="{{ article.link }}" target="_blank" class="text-black">
+          <a href="{{ article.meta('link') }}" target="_blank" class="text-black">
             <div class="ratio ratio-4x3">
               <picture>
                 <source srcset="{{ article.thumbnail.src|resize(400, 300)|towebp }}" type="image/webp">
@@ -19,7 +19,7 @@
               </picture>
             </div>
             
-            <h4 class="h5 mt-3">{{ article.title }}</h3>
+            <span class="d-block fs-4 lh-1 mt-3">{{ article.title }}</span>
           </a>
         </div>
       {% endfor %}

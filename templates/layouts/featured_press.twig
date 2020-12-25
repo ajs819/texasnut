@@ -1,0 +1,38 @@
+{% set articles = fn('get_posts', { 'post_type': 'press_article', 'numberposts': 3 } ) %}
+
+<section class="section layout-{{ layout.acf_fc_layout }}">
+  <div class="container py-5 py-lg-6">
+    {% if layout.title %}
+      <h2 class="text-center">{{ layout.title }}</h2>
+    {% endif %}
+
+    <div class="row mt-4 mt-lg-5 gy-4 gy-lg-5">
+      {% for article in articles %}
+        {% set article = Post(article) %}
+
+        <div class="col-12">
+          <div class="row gy-3 gy-lg-0 position-relative">
+            <div class="col-12 col-lg-4">
+              <div class="ratio ratio-4x3">
+                <picture>
+                  <source srcset="{{ article.thumbnail.src|resize(400, 300)|towebp }}" type="image/webp">
+                  <img class="object-fit-cover w-100 h-100" src="{{ article.thumbnail.src|resize(400, 300) }}" alt="{{ article.thumbnail.alt }}">
+                </picture>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-8">
+              <h3>{{ article.title }}</h3>
+
+              {{ article.content }}
+              
+              <a href="{{ article.meta('link') }}" target="_blank" class="stretched-link">
+                Read More&raquo;
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
