@@ -1,0 +1,36 @@
+<section class="section layout-{{ layout.acf_fc_layout }} bg-light mb-lg-4">
+  <div class="container py-4 py-lg-0">
+    <div class="row justify-content-between align-items-center gy-3 gy-lg-0">
+      <div class="col-12 col-lg-6 order-lg-2">
+        {% if layout.image %}
+          <div class="position-relative mt-lg-4 mb-lg-n4">
+            <picture>
+              <source srcset="{{ Image(layout.image).src|resize(650)|towebp }}" type="image/webp">
+              <img class="w-100 h-100" loading="lazy" src="{{ Image(layout.image).src|resize(650) }}" alt="{{ layout.image.alt }}">
+            </picture>
+
+            <div class="texas-stamp">
+              <img loading="lazy" class="img-fluid" src="{{ theme.path }}/dist/assets/texas-stamp.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="col-12 col-lg-5 py-lg-5 order-lg-1">
+        {% if layout.title %}
+          <h2>{{ layout.title }}</h2>
+        {% endif %}
+
+        {{ layout.text }}
+
+        {% if layout.link %}
+          <div class="text-center text-lg-start mt-4 mt-lg-5">
+            <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn btn-primary">
+              {{ layout.link.title }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
