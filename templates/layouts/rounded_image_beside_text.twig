@@ -1,0 +1,30 @@
+<section class="section layout-{{ layout.acf_fc_layout }} bg-light">
+  <div class="container py-4 py-lg-5">
+    <!-- <div class="texas-stamp">
+      <img loading="lazy" class="img-fluid" src="{{ theme.path }}/dist/assets/texas-stamp.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
+    </div> -->
+
+    {% if layout.title %}
+      <h2 class="text-center mb-4 mb-lg-5">{{ layout.title }}</h2>
+    {% endif %}
+
+    <div class="row align-items-center gy-4 gy-lg-0">
+      <div class="col-12 col-lg-5">
+        {% if layout.image %}
+          <div class="px-4 px-lg-0">
+            <div class="ratio ratio-1x1">
+              <picture>
+                <source srcset="{{ Image(layout.image).src|resize(650, 650)|towebp }}" type="image/webp">
+                <img class="rounded-circle img-fluid" loading="lazy" src="{{ Image(layout.image).src|resize(650, 650) }}" alt="{{ layout.image.alt }}">
+              </picture>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="col-12 col-lg-7">
+        {{ layout.text }}
+      </div>
+    </div>
+  </div>
+</section> 

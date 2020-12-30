@@ -1,0 +1,5 @@
+.layout-rounded_image_beside_text {
+  p:not(:last-child) {
+    @extend .mb-xxl-5;
+  }
+}

@@ -1,0 +1,18 @@
+{% set pulisher = '1937430130197428' %}
+{% set jobs = fn('wp_remote_get', 'https://api.indeed.com/ads/apisearch?publisher=' ~ publisher ~ '&&userip=' ~ user_ip ~ '&useragent=' ~ user_agent ~ '&v=2') %}
+
+<section class="section layout-{{ layout.acf_fc_layout }}">
+  <div class="container py-5 py-lg-6">
+    <div class="text-center">
+      {% if layout.title %}
+        <h2>{{ layout.title }}</h2>
+      {% endif %}
+
+      {{ layout.text }}
+    </div>
+
+    {#<pre>
+      {{ jobs|print_r }}
+    </pre>#}
+  </div>
+</section>

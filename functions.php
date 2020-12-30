@@ -86,6 +86,18 @@ class StarterSite extends Timber\Site {
     $context['site'] = $this;
     $context['main_menu'] = new Timber\Menu( 'main_Menu');
     $context['image_sizes'] = [ 320, 640, 960, 1280, 1920, 2560 ];
+
+    $context['user_ip'] = $clientIP = $_SERVER['HTTP_CLIENT_IP'] 
+                      ?? $_SERVER["HTTP_CF_CONNECTING_IP"] # when behind cloudflare
+                      ?? $_SERVER['HTTP_X_FORWARDED'] 
+                      ?? $_SERVER['HTTP_X_FORWARDED_FOR'] 
+                      ?? $_SERVER['HTTP_FORWARDED'] 
+                      ?? $_SERVER['HTTP_FORWARDED_FOR'] 
+                      ?? $_SERVER['REMOTE_ADDR'] 
+                      ?? '0.0.0.0';
+
+    $context['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+
 		return $context;
 	}
 
