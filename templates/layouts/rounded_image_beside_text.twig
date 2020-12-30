@@ -15,7 +15,7 @@
             <div class="ratio ratio-1x1">
               <picture>
                 <source srcset="{{ Image(layout.image).src|resize(650, 650)|towebp }}" type="image/webp">
-                <img class="rounded-circle img-fluid" loading="lazy" src="{{ Image(layout.image).src|resize(650, 650) }}" alt="{{ layout.image.alt }}">
+                <img class="rounded-circle img-fluid w-100" loading="lazy" src="{{ Image(layout.image).src|resize(650, 650) }}" alt="{{ layout.image.alt }}">
               </picture>
             </div>
           </div>

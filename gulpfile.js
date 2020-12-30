@@ -57,7 +57,8 @@ function styles() {
 function vendor() {
     'use strict';
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-                     'node_modules/rellax/rellax.min.js'])
+                     'node_modules/rellax/rellax.min.js',
+                     'node_modules/aos/dist/aos.js'])
         .pipe(plumber())
         .pipe(eslint())
         .pipe(eslint.format())

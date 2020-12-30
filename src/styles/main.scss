@@ -18,6 +18,7 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/aos/dist/aos.css";
 
 @import 'abstracts/utilities';
 @import 'base/gravity-forms';
@@ -32,4 +33,5 @@
 @import 'layout/quote';
 @import 'layout/offset_image_beside_text';
 @import 'layout/rounded_image_beside_text';
+@import 'layout/3_rounded_images_beside_text';
 /* purgecss end ignore */

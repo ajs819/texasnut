@@ -1,0 +1,28 @@
+.layout-3_rounded_images_beside_text {
+  .images {
+    position: relative;
+    height: 730px;
+
+    .image {
+      position: absolute;
+      width: 50%;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

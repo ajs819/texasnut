@@ -1,10 +1,7 @@
 (function($) {
   "use strict";
 
-  /*
-   * PARALLAX
-   */
-
+  // PARALLAX
   // align first section top
   var rellax = new Rellax('.section:first-child .rellax');
   
@@ -12,5 +9,8 @@
   var rellax = new Rellax('.section:not(:first-child) .rellax', {
     center: true
   });
+
+  // ANIMATE ON SCROLL
+  AOS.init();
 
 })( jQuery );
