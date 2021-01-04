@@ -15,7 +15,7 @@
       width: 50%;
 
       img {
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
           border: 2px solid $white;
         }
       }

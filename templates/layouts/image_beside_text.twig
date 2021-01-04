@@ -1,5 +1,5 @@
 <section class="section layout-{{ layout.acf_fc_layout }}">
-  <div class="container py-5">
+  <div class="container py-5 py-lg-6">
     <div class="row justify-content-between align-items-center gy-3">
       <div class="col-12 col-lg-4 {{ layout.order == 'text_image' ? 'order-lg-2' }}">
         {% if layout.image %}
@@ -26,7 +26,7 @@
         {{ layout.text }}
 
         {% if layout.link %}
-          <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }}">
+          <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }} mt-3">
             {{ layout.link.title }}
           </a>
         {% endif %}
