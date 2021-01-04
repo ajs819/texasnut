@@ -1,6 +1,6 @@
 <section class="section layout-{{ layout.acf_fc_layout }} bg-light">
-  <div class="container py-4 py-lg-5">
-    <div class="row gy-4 gy-lg-0">
+  <div class="container-xxl py-4 py-lg-5">
+    <div class="row align-items-center gy-4 gy-lg-0">
       {% if layout.images %}
         <div class="col-12 col-lg-7 order-lg-2">
           <div class="images">
@@ -18,12 +18,14 @@
         </div>
       {% endif %}
 
-      <div class="col-12 col-lg-5 py-6 order-lg-1">
+      <div class="col-12 col-lg-5 order-lg-1">
         {% if layout.title %}
           <h2>{{ layout.title }}</h2>
         {% endif %}
 
-        {{ layout.text }}
+        <div class="lead">
+          {{ layout.text }}
+        </div>
       </div>
     </div>
   </div>
