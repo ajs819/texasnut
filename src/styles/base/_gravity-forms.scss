@@ -37,7 +37,8 @@
 
   .gform_validation_container,
   .validation_error,
-  .validation_message {
+  .validation_message,
+  .gform_ajax_spinner {
     @extend .d-none;
   }
 }
