@@ -26,6 +26,10 @@
       }
     }
   }
+
+  .gform_footer {
+    @extend .text-center, .text-lg-start;
+  }
   
   .gform_button {
     @extend .btn, .btn-primary;
