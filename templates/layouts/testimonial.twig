@@ -1,4 +1,5 @@
-{% set testimonial = Post(layout.testimonial) %}
+{% set testimonial = fn('get_posts', { 'post_type': 'testimonial', 'orderby': 'rand', 'numberposts': 1 } ) %}
+{% set testimonial = Post(testimonial[0]) %}
 
 <section class="section layout-{{ layout.acf_fc_layout }}">
   <div class="bg-cover">
