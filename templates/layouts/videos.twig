@@ -1,0 +1,32 @@
+<section class="section layout-{{ layout.acf_fc_layout }} bg-light">
+  <div class="container py-5 py-lg-6">
+    {% if layout.title %}
+      <h2 class="text-center mb-4 mb-lg-5">{{ layout.title }}</h2>
+    {% endif %}
+
+    <div class="row justify-content-center">
+      {% for video in layout.videos %}
+        <div class="col-12 col-lg-6">
+          <a data-fancybox="videos" href="{{ video.video }}" class="text-dark">
+            {% if video.poster %}
+              <div class="ratio ratio-16x9 mb-3">
+                <picture>
+                  <source srcset="{{ Image(video.poster).src|resize(600, 340)|towebp }}" type="image/webp">
+                  <img class="object-fit-cover w-100 h-100" src="{{ Image(video.poster).src|resize(600, 340) }}" alt="{{ video.poster.alt }}">
+                </picture>
+              </div>
+            {% endif %}
+
+            {% if video.title %}
+              <h4>{{ video.title }}</h4>
+            {% endif %}
+
+            {% if video.text %}
+              <p>{{ video.text }}</p>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
