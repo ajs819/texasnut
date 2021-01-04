@@ -84,7 +84,11 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
     $context['site'] = $this;
-    $context['main_menu'] = new Timber\Menu( 'main_Menu');
+    $context['options'] = get_fields('options');
+    $context['main_menu'] = new Timber\Menu( 'main_menu');
+    $context['footer_menu_1'] = has_nav_menu('footer_menu_1') ? new Timber\Menu( 'footer_menu_1') : false;
+    $context['footer_menu_2'] = has_nav_menu('footer_menu_2') ? new Timber\Menu( 'footer_menu_2') : false;
+    $context['footer_menu_3'] = has_nav_menu('footer_menu_3') ? new Timber\Menu( 'footer_menu_3') : false;
     $context['image_sizes'] = [ 320, 640, 960, 1280, 1920, 2560 ];
 
     $context['user_ip'] = $clientIP = $_SERVER['HTTP_CLIENT_IP'] 
@@ -180,7 +184,10 @@ class StarterSite extends Timber\Site {
 
 	public function register_menus() {
 		register_nav_menus( array(
-			'main_menu' => __( 'Main Menu', 'texasnut' )
+      'main_menu' => __( 'Main Menu', 'texasnut' ),
+      'footer_menu_1' => __( 'Footer Menu 1', 'texasnut' ),
+      'footer_menu_2' => __( 'Footer Menu 2', 'texasnut' ),
+      'footer_menu_3' => __( 'Footer Menu 3', 'texasnut' )
 		) );
 	}
 
@@ -202,3 +209,4 @@ new StarterSite();
 	 * Custom functions
 	 */
   include 'inc/acf-gf.php';
+  include 'inc/acf-options.php';

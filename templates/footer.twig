@@ -1,3 +1,5 @@
+{% set footer_menus = [ footer_menu_1, footer_menu_2, footer_menu_3 ] %}
+
 <footer id="footer" class="position-relative bg-primary text-white">
   <div class="bg-cover">
     <picture>
@@ -6,58 +8,52 @@
     </picture>
   </div>
 
-  <div class="container position-relative py-4 py-lg-5">
-    <div class="row justify-content-between">
+  <div class="container-fluid position-relative py-4 py-lg-5">
+    <div class="row justify-content-center justify-content-xxl-between">
       <div class="col-12 col-lg-auto">
-        <div class="row">
-          <div class="col-12 col-lg-auto">
-            <ul class="nav flex-column text-center text-lg-start">
-              <li class="nav-item">
-                <a class="nav-link fw-light text-white" href="#">
-                  Need Help?
-                </a>
-              </li>
+        <div class="row gy-4">
+          {% for menu in footer_menus %}
+            {% if menu.items|length > 0 %}
+              <div class="col-12 col-lg-auto">
+                <ul class="nav flex-column text-center text-lg-start">
+                  <li class="nav-item">
+                    <span class="nav-link fw-bold text-white">
+                      {{ menu.name }}
+                    </span>
+                  </li>
 
-              <li class="nav-item">
-                <a class="nav-link fw-light text-white" href="#">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-lg-auto">
-            <ul class="nav flex-column text-center text-lg-start">
-              <li class="nav-item">
-                <a class="nav-link fw-light text-white" href="#">
-                  Resources
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link fw-light text-white" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link fw-light text-white" href="#">
-                  Sitemap
-                </a>
-              </li>
-            </ul>
-          </div>
+                  {% for item in menu.items %}
+                    <li class="nav-item">
+                      <a class="nav-link fw-light text-white" href="{{ item.url }}" target="{{ item.target ? item.target : '_self' }}">
+                        {{ item.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
 
-      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-        <div class="px-5 px-lg-0">
-          <img class="d-block mx-auto img-fluid" src="{{ theme.path }}/dist/assets/logo.svg" alt="Texas Star Nut &amp; Food Co.&trade;" style="filter: brightness(100);">
+      <div class="col-12 col-lg-auto">
+        <div class="row">
+          {% if options.footer_details %}
+            <div class="col-12 col-xxl-auto text-center text-xxl-start mt-5 mt-xxl-0">
+              {{ options.footer_details }}
+            </div>
+          {% endif %}
+          
+          <div class="col-12 col-xxl-auto text-center text-xxl-start mt-5 mt-xxl-0">
+            <div class="px-5 px-lg-0">
+              <img class="logo img-fluid" src="{{ theme.path }}/dist/assets/logo.svg" alt="Texas Star Nut &amp; Food Co.&trade;">
+            </div>
+          </div>    
         </div>
       </div>
     </div>
 
-    <div class="mt-3 mt-lg-5">
+    <div class="mt-4 mt-xxl-5 text-center text-xxl-start">
       <span>&copy;{{"now"|date('Y')}} Texas Star Nut &amp; Food Co. All Rights Reserved.</span>
     </div>
   </div>
