@@ -67,6 +67,14 @@
   text-shadow: 2px 4px 3px rgba($black, .3);
 }
 
+.br-mobile-none {
+  @include media-breakpoint-down(md) {
+    br {
+      display: none;
+    }
+  }
+}
+
 // .ratio {
 //   overflow: hidden;
 

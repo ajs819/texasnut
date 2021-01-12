@@ -21,13 +21,17 @@
   <div class="container py-5 py-lg-6 text-center text-white text-shadow">
     {% if layout.title %}
       <div data-aos="fade-up" data-aos-duration="1000">
-        <h1 class="display-4">{{ layout.title }}</h1>
+        <h1 class="display-4 br-mobile-none">
+          {{ layout.title }}
+        </h1>
       </div>
     {% endif %}
 
     {% if layout.subtitle %}
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-        <span class="h2 mb-0">{{ layout.subtitle }}</span>
+        <span class="h2 br-mobile-none mb-0">
+          {{ layout.subtitle }}
+        </span>
       </div>
     {% endif %}
   </div>

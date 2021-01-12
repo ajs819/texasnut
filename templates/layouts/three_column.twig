@@ -29,7 +29,7 @@
               </div>
             {% endif %}
             
-            <h4>{{ column.title }}</h4>
+            <h4>{{ column.title|replace({ '®' : '<sup>&reg;</sup>', '™' : '<sup>&trade;</sup>' }) }}</h4>
             {{ column.text }}
 
             {% if column.link %}

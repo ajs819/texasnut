@@ -26,9 +26,11 @@
         {{ layout.text }}
 
         {% if layout.link %}
-          <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }} mt-3">
-            {{ layout.link.title }}
-          </a>
+          <div class="text-center text-lg-start mt-auto">
+            <a href="{{ layout.link.url }}" target="{{ layout.link.target }}" class="btn {{ layout.link_style }} mt-3">
+              {{ layout.link.title }}
+            </a>
+          </div>
         {% endif %}
       </div>
     </div>

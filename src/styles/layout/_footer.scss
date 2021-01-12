@@ -1,13 +1,6 @@
 #footer {
   .logo {
+    width: 300px;
     filter: brightness(100);
-
-    @include media-breakpoint-up(sm) {
-      max-width: 300px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-      // max-width: 20vw;
-    }
   }
 }
