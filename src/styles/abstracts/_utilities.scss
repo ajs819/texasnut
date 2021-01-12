@@ -68,7 +68,7 @@
 }
 
 .br-mobile-none {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     br {
       display: none;
     }
