@@ -11,7 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 const purgecss = require('gulp-purgecss')
 const sass = require('gulp-sass');
 const del = require('del');
-const webp = require('gulp-webp');
+// const webp = require('gulp-webp');
 
 // Optimize Images
 function images() {
@@ -33,7 +33,7 @@ function images() {
             })
         ])))
         .pipe(gulp.dest('dist/assets'))
-        .pipe(webp())
+        // .pipe(webp())
         .pipe(gulp.dest('dist/assets'));
     }
 
