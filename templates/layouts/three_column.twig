@@ -1,30 +1,36 @@
 <section class="section layout-{{ layout.acf_fc_layout }}">
   <div class="container py-5 text-center">
-    {% if layout.title %}
-      <h2>{{ layout.title }}</h2>
-    {% endif %}
+    {% if layout.title or layout.text %}
+      <div class="mb-4 mb-lg-5">
+        {% if layout.title %}
+          <h2>{{ layout.title }}</h2>
+        {% endif %}
 
-    {% if layout.text %}
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-          <div class="lead">
-            {{ layout.text }}
+        {% if layout.text %}
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+              <div class="lead">
+                {{ layout.text }}
+              </div>
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
     {% endif %}
 
     {% if layout.columns %}
-      <div class="row justify-content-center gy-5 mt-4 mt-lg-5">
+      <div class="row justify-content-center gy-5">
         {% for column in layout.columns %}
           <div class="col-12 col-lg-4 d-flex flex-column">
             {% if column.image %}
-              <div class="px-5 mb-4">
-                <div class="ratio ratio-4x3">
-                  <picture>
-                    <source srcset="{{ Image(column.image).src|towebp }}" type="image/webp">
-                    <img class="w-100 h-100" loading="lazy" src="{{ Image(column.image).src }}" alt="{{ column.image.alt }}">
-                  </picture>
+              <div class="row justify-content-center mb-4">
+                <div class="col-7 col-md-8">
+                  <div class="ratio ratio-{{ layout.image_container_ratio }}">
+                    <picture>
+                      <source srcset="{{ Image(column.image).src|towebp }}" type="image/webp">
+                      <img class="w-100 h-100" loading="lazy" src="{{ Image(column.image).src }}" alt="{{ column.image.alt }}">
+                    </picture>
+                  </div>
                 </div>
               </div>
             {% endif %}

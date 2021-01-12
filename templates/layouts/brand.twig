@@ -14,14 +14,16 @@
 
   <div class="container-xxl gx-0 gx-lg-3">
     <div class="row gx-0 gx-lg-3">
-      <div class="col-12 col-lg-6 col-xl-4">
+      <div class="col-12 col-lg-6 col-xl-5 col-xxl-4">
         <div class="card shadow" style="background-color: {{ layout.color }}">
           <div class="card-body text-white">
             {% if layout.logo %}
-              <picture>
-                <source srcset="{{ Image(layout.logo).src|resize(600)|towebp }}" type="image/webp">
-                <img loading="lazy" class="img-fluid" src="{{ Image(layout.logo).src|resize(600) }}" alt="{{ layout.logo.alt }}">
-              </picture>
+              <div class="px-5 px-lg-0 text-center">
+                <picture>
+                  <source srcset="{{ Image(layout.logo).src|resize(600)|towebp }}" type="image/webp">
+                  <img loading="lazy" class="img-fluid" src="{{ Image(layout.logo).src|resize(600) }}" alt="{{ layout.logo.alt }}">
+                </picture>
+              </div>
             {% endif %}
 
             {% if layout.title %}
