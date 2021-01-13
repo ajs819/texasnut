@@ -22,4 +22,14 @@ body {
   [class^="container"] {
     position: relative;
   }
+
+  .anchor {
+    position: absolute;
+    bottom: 100%;
+    height: $header-height-xs;
+
+    @include media-breakpoint-up(lg) {
+      height: $header-height-lg;
+    }
+  }
 }
