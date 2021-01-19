@@ -1,8 +1,14 @@
 <a href="{{ feature.link }}" class="feature d-block position-relative w-100 overflow-hidden h-lg-100">
   <div class="position-absolute w-100 h-100 overlay">
     <picture>
-      <source srcset="{{ Image(feature.image).src|resize(1280)|towebp }}" type="image/webp">
-      <img class="position-absolute w-100 h-100 object-fit-cover object-position-{{ feature.image_y_position }}" loading="lazy" src="{{ Image(feature.image).src|resize(1280) }}" alt="{{ feature.image.alt }}">
+      <source type="image/webp"
+        sizes="(max-width: {{ image_sizes|last }}px) 100vw, {{ image_sizes|last }}px"
+        srcset="{% for size in image_sizes %}{{ Image(feature.image).src|resize(size)|towebp }} {{ size }}w{{ loop.last ? '' : ',' }}{% endfor %}">
+
+        <img class="position-absolute w-100 h-100 object-fit-cover object-position-{{ feature.image_y_position }}"
+          sizes="(max-width: {{ image_sizes|last }}px) 100vw, {{ image_sizes|last }}px"
+          srcset="{% for size in image_sizes %}{{ Image(feature.image).src|resize(size) }} {{ size }}w{{ loop.last ? '' : ',' }}{% endfor %}"
+          src="{{ Image(feature.image).src|resize(image_sizes|last) }}" alt="{{ feature.alt }}">
     </picture>
   </div>
 

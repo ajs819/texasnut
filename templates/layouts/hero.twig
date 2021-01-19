@@ -9,7 +9,7 @@
           <img class="bg-cover-img object-position-{{ layout.image_y_position }}"
             sizes="(max-width: {{ image_sizes|last }}px) 100vw, {{ image_sizes|last }}px"
             srcset="{% for size in image_sizes %}{{ Image(layout.image).src|resize(size) }} {{ size }}w{{ loop.last ? '' : ',' }}{% endfor %}"
-            src="{{ Image(layout.image).src|resize(image_sizes|last) }}" alt="{{ post.thumbnail.alt }}">
+            src="{{ Image(layout.image).src|resize(image_sizes|last) }}" alt="{{ layout.image.alt }}">
       </picture>
     </div>
   </div>
