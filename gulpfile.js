@@ -61,9 +61,6 @@ function vendor() {
                      'node_modules/aos/dist/aos.js',
                      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'])
         .pipe(plumber())
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
         .pipe(concat('vendor.js'))
         .pipe(rename({
             suffix: '.min'
