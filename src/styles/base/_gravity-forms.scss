@@ -13,6 +13,12 @@
         textarea {
           max-height: 160px;
         }
+
+        &.hidden_label {
+          .gfield_label {
+            display: none;
+          }
+        }
   
         &.gfield_error {
           .gfield_label {
