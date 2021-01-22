@@ -1,6 +1,11 @@
 (function($) {
   "use strict";
 
+  // PRELOAD
+  $(window).on('load', function() {
+    $('#container').show();
+  })
+
   // PARALLAX
   // align first section top
   var rellax = new Rellax('.section:first-child .rellax');
@@ -11,6 +16,8 @@
   });
 
   // ANIMATE ON SCROLL
-  AOS.init();
+  $(window).on('load', function() {
+    AOS.init();
+  });
 
 })( jQuery );
