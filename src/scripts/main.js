@@ -1,11 +1,6 @@
 (function($) {
   "use strict";
 
-  // PRELOAD
-  $(window).on('load', function() {
-    $('#container').show();
-  })
-
   // PARALLAX
   // align first section top
   if ($('.section:first-child .rellax').length) {
