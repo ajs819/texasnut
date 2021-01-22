@@ -10,10 +10,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#container {
-  // max-width: 2100px;
-  // margin: auto;
-  // background-color: $white;
+body.no-js #container {
+  display: block !important;
 }
 
 .section {
