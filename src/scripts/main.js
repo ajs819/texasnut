@@ -8,12 +8,16 @@
 
   // PARALLAX
   // align first section top
-  var rellax = new Rellax('.section:first-child .rellax');
-  
+  if ($('.section:first-child .rellax').length) {
+    var rellax = new Rellax('.section:first-child .rellax');
+  }
+    
   // align other sections center
-  var rellax = new Rellax('.section:not(:first-child) .rellax', {
-    center: true
-  });
+  if ($('.section:not(:first-child) .rellax').length) {
+    var rellax = new Rellax('.section:not(:first-child) .rellax', {
+      center: true
+    });
+  }
 
   // ANIMATE ON SCROLL
   $(window).on('load', function() {
