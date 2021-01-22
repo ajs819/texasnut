@@ -51,6 +51,8 @@
 }
 
 .overlay {
+  background-color: $dark;
+
   &::after {
     content: "";
     position: absolute;
